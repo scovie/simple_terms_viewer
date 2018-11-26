@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Simple Terms Viewer</h1>
+	<p>This is a prototype micro-application built using Python, Flask, and MariaDB.  
+	The following features are available:</p>
+	<ul>
+		<li>View Terms and Conditions reference data (select <a href="{{ url_for('refdata') }}">Reference Data</a> from the menu)</li>
+		<li>Search for a single customer and view their current Terms (select <a href="{{ url_for('customer') }}">Customer Query</a> from the menu)</li>
+	</ul>
+	<p>The following features are on the application backlog:</p>
+	<ul>
+		<li>Connect to a production database for live data</li>
+		<li>Allow reference data to be refreshed from a production source</li>
+		<ul>
+			<li>Include logic to prevent refreshing the data too frequently</li>
+		</ul>
+		<li>Add security and form validation as appropriate based on whether the other backlog items are implemented</li>
+		<li>Add hyperlinks to the <i>'Terms and Conditions Version'</i> cells on the refdata page to open the full Terms for review</li>
+	</ul>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h2>View Terms Reference Data</h2>
+	<table>
+		<tr>
+			<th>Terms and Conditions Version</th>
+			<th>Description</th>
+			<th>Effective Start Date</th>
+			<th>Effective End Date</th>
+		</tr>
+		{% if results %}
+			{% for result in results %}
+				<tr>
+					<td>{{ result.TERMS_COND_VERSION }}</td>
+					<td>{{ result.TERMS_COND_DESCRIPTION }}</td>
+					<td>{{ result.EFFECTIVE_START }}</td>
+					<td>{{ result.EFFECTIVE_END }}</td>
+				</tr>
+			{% endfor %}
+	</table>
+		{% else %}
+			<p><i>ref data not available</i></p>
+		{% endif %}
+{% endblock %}

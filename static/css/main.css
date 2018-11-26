@@ -1,0 +1,31 @@
+body, p, h1, h2 {
+	font-family: verdana;
+	color: #F5F5F5;
+}
+body {
+    background-color: #0C1021;
+}
+a {
+    color: #F5F5F5;
+}
+a:visited {
+    color: #D8FA3C;
+}
+a:hover {
+    color: #D8FA3C;
+}
+a:focus {
+    color: #F5F5F5;
+}
+a:active {
+    color: #F5F5F5;
+}
+button {
+	margin: 10px;
+	padding: 4px;
+}
+table, th, td {
+	border: 1px solid white;
+	padding: 10px;
+	text-align: center;
+}

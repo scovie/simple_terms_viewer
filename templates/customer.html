@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h2>View current Terms for a specific Customer</h2>
+	<p>Input CTN:</p>
+	<form method="POST">
+		<input name="text">
+		<input type="submit">
+	</form><br><br>
+	<table>
+		<tr>
+			<th>CTN</th>
+			<th>Current Terms</th>
+			<th>Expiration Date</th>
+		</tr>
+		{% if results %}
+			{% for result in results %}
+				<tr>
+					<td>{{ result.CTN }}</td>
+					<td>{{ result.EFFECTIVE_TERMS }}</td>
+					<td>{{ result.EXPIRATION_DATE }}</td>
+				</tr>
+			{% endfor %}
+	</table>
+		{% else %}
+			<p><i>Awaiting valid query</i></p>
+		{% endif %}
+{% endblock %}

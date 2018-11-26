@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Terms Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body>
+	<a href="{{ url_for('help') }}">Help</a> |
+	<a href="{{ url_for('refdata') }}">Reference Data</a> |
+	<a href="{{ url_for('customer') }}">Customer Query</a>
+    {% block body %}{% endblock %}
+</body>
+</html>
